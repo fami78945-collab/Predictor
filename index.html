@@ -98,7 +98,7 @@
             100% { width: 100%; }
         }
 
-        /* Login Page - আগের মতই থাকবে */
+        /* Login Page */
         #loginPage {
             position: absolute;
             top: 0;
@@ -125,7 +125,6 @@
             justify-content: flex-start;
             align-items: center;
             position: relative;
-            /* UPDATED: Increased padding-top for better layout */
             padding-top: 90px; 
             overflow-y: auto;
         }
@@ -246,14 +245,13 @@
             display: none;
         }
 
-        /* UPDATED: Changed to space-between for left/right alignment */
         .login-footer {
             position: relative;
             margin-top: 12px;
             width: 100%;
             max-width: 280px;
             display: flex;
-            justify-content: space-between; /* Place items on opposite ends */
+            justify-content: space-between;
             align-items: center;
         }
 
@@ -268,16 +266,14 @@
             border-radius: 12px;
             background: rgba(255, 255, 255, 0.1);
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            color: #aaa; /* Default color for text */
+            color: #aaa;
             gap: 4px;
         }
         
-        /* Specific style for Demo button icon */
         #demoAccessLink i {
-             color: #007bff; /* Blue color for Demo icon */
+             color: #007bff;
         }
         
-        /* Specific style for Help Line icon */
         #helpLineLink i {
             color: #28a745; 
         }
@@ -290,18 +286,16 @@
             font-size: 0.85em;
         }
 
-        /* CHANGE: Icon position adjusted from right: 15px to 30px */
         .about-us-icon {
             position: absolute;
             top: 35px; 
-            right: 30px; /* MOVED SLIGHTLY LEFT */
+            right: 30px;
             color: #ff4500;
             font-size: 1em;
             cursor: pointer;
             z-index: 10;
         }
 
-        /* Login Loading Overlay - This overlay is now effectively hidden via JS change */
         .login-loading {
             position: absolute;
             top: 0;
@@ -332,23 +326,23 @@
             color: #fff;
         }
 
-        /* Main Application - শুধুমাত্র এটার ব্যাকগ্রাউন্ড সাদা করা হয়েছে */
+        /* Main Application */
         #mainApp {
             display: none;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            background: #ffffff; /* সাদা ব্যাকগ্রাউন্ড */
+            background: #ffffff;
         }
 
-        /* Header - Original Design with Exact Border Radius */
+        /* Header */
         header {
             background-color: #ff4500;
             color: white;
             height: 80px;
             width: 100%;
             text-align: center;
-            border-radius: 0 0 200px 30px; /* Exact original border radius */
+            border-radius: 0 0 200px 30px;
             font-size: 0.85em;
             font-weight: bold;
             display: flex;
@@ -365,8 +359,8 @@
             align-items: center;
             justify-content: flex-start;
             width: 100%;
-            height: calc(100% - 130px); /* MODIFIED: height calculation reduced to 130px */
-            margin-top: 90px; /* MODIFIED: Adjusted margin for header to move content up (from 110px to 90px) */
+            height: calc(100% - 130px);
+            margin-top: 90px;
             position: relative;
             padding: 0 15px;
         }
@@ -377,7 +371,7 @@
         }
 
         .logo-small img {
-            width: 120px; /* MODIFIED: Increased logo size (from 100px) */
+            width: 120px;
             height: auto;
             filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
         }
@@ -392,8 +386,8 @@
         }
 
         .circle {
-            width: 240px; /* MODIFIED: Increased circle size (from 200px) */
-            height: 240px; /* MODIFIED: Increased circle size (from 200px) */
+            width: 240px;
+            height: 240px;
             border-radius: 50%;
             border: 6px solid #ff4500;
             display: flex;
@@ -408,7 +402,6 @@
             overflow: hidden;
         }
         
-        /* FIX: সেন্টারিং নিশ্চিত করা হয়েছে */
         .circle-content {
             display: flex;
             align-items: center;
@@ -447,9 +440,8 @@
             -webkit-box-orient: vertical;
         }
         
-        /* FIX: Multiplier এর জন্য সেন্টারিং ঠিক করা হয়েছে */
         .multiplier {
-            font-size: 2.8em; /* MODIFIED: Adjusted font size for bigger circle (from 2.2em) */
+            font-size: 2.8em;
             font-weight: bold;
             color: #ff4500;
             z-index: 4;
@@ -461,10 +453,9 @@
             height: 100%;
         }
 
-        /* FIX: Loading এর জন্য সেন্টারিং ঠিক করা হয়েছে */
         .loading {
             color: #666;
-            font-size: 1.8em; /* MODIFIED: Adjusted font size for bigger circle (from 1.4em) */
+            font-size: 1.8em;
             font-weight: bold;
             width: 100%; 
             display: flex; 
@@ -478,18 +469,14 @@
             border-radius: 50%;
             z-index: 2;
             pointer-events: none;
-            /* BLUR EFFECT: Added transition for smooth effect */
-            transition: filter 0.5s ease-out, opacity 0.5s ease-out, animation 0.5s linear; /* Added animation to transition */
+            transition: filter 0.5s ease-out, opacity 0.5s ease-out, animation 0.5s linear;
         }
         
-        /* BLUR EFFECT: New class to apply blur */
         .circle-inner.blurred {
             filter: blur(2px) brightness(0.8);
         }
         
-        /* --- NEW: Circle Colors and Speed Animation Classes --- */
-        
-        /* 1. Animation Definitions */
+        /* Circle Animations */
         @keyframes rotateRight {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
@@ -500,45 +487,41 @@
             to { transform: rotate(0deg); }
         }
 
-        /* 2. Speed Classes (Used by JS) */
         .slow-spin-right {
-            animation: rotateRight 15s linear infinite; /* Slower speed */
+            animation: rotateRight 15s linear infinite;
         }
         .slow-spin-left {
-            animation: rotateLeft 20s linear infinite; /* Slower speed */
+            animation: rotateLeft 20s linear infinite;
         }
         .fast-spin-right {
-            animation: rotateRight 3s linear infinite; /* Faster speed */
+            animation: rotateRight 3s linear infinite;
         }
         .fast-spin-left {
-            animation: rotateLeft 4s linear infinite; /* Faster speed */
+            animation: rotateLeft 4s linear infinite;
         }
 
-        /* 3. Base Circle Styles with New Red/Orange Colors */
         .circle-right {
-            width: 220px; /* MODIFIED: Adjusted inner circle size (from 180px) */
-            height: 220px; /* MODIFIED: Adjusted inner circle size (from 180px) */
-            border: 5px dashed #ff6347; /* Red/Tomato */
+            width: 220px;
+            height: 220px;
+            border: 5px dashed #ff6347;
             clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
             opacity: 0.7;
         }
         
         .circle-left {
-            width: 200px; /* MODIFIED: Adjusted inner circle size (from 160px) */
-            height: 200px; /* MODIFIED: Adjusted inner circle size (from 160px) */
-            border: 5px dashed #e03e00; /* Dark Red */
+            width: 200px;
+            height: 200px;
+            border: 5px dashed #e03e00;
             clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
             opacity: 0.7;
         }
         
         .circle-left-3 {
-            width: 180px; /* MODIFIED: Adjusted inner circle size (from 140px) */
-            height: 180px; /* MODIFIED: Adjusted inner circle size (from 140px) */
-            border: 5px dashed #ff4500; /* Main Orange/Red */
+            width: 180px;
+            height: 180px;
+            border: 5px dashed #ff4500;
             opacity: 0.7;
         }
-        /* --- END Circle Styles --- */
-
 
         .next-button {
             background: linear-gradient(135deg, #ff4500, #ff6b35);
@@ -570,8 +553,7 @@
             background: linear-gradient(135deg, #cc3700, #e03e00);
             cursor: not-allowed;
             transform: scale(0.96);
-            /* Optional: Add a visual lock effect */
-            filter: grayscale(50%); 
+            filter: grayscale(50%);
         }
 
         .button-text {
@@ -586,12 +568,12 @@
             z-index: 2;
         }
 
-        /* Footer - Fixed Position */
+        /* Footer */
         footer {
-            position: fixed; /* ফিক্সড করা হয়েছে */
+            position: fixed;
             bottom: 0;
             width: 100%;
-            max-width: 400px; /* কন্টেইনারের সাথে মিল রাখা */
+            max-width: 400px;
             background-color: #ff4500;
             padding: 8px 0;
             box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
@@ -606,7 +588,7 @@
             margin: 0 auto;
         }
 
-        .nav-home, .nav-chat {
+        .nav-home, .nav-chat { 
             font-size: 1.3em;
             text-decoration: none;
             color: white;
@@ -624,12 +606,12 @@
         }
 
         .timer {
-            font-size: 1em; /* ফন্ট সাইজ সামান্য ছোট করা হয়েছে */
+            font-size: 1em;
             font-weight: bold;
             color: white;
-            min-width: 90px; /* আরেকটু বেশি জায়গা */
+            min-width: 90px;
             text-align: center;
-            white-space: nowrap; /* Prevent timer/demo text from wrapping */
+            white-space: nowrap;
         }
 
         /* About Us Page */
@@ -789,7 +771,41 @@
             font-size: 0.8em;
         }
 
-        /* For larger screens - center the 400px container */
+        /* Ad Container */
+        .ad-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            flex-direction: column;
+        }
+
+        .ad-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 300px;
+            width: 90%;
+        }
+
+        .ad-close {
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #ff4500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* For larger screens */
         @media only screen and (min-width: 401px) {
             body {
                 background: linear-gradient(135deg, #1a1a2e, #16213e);
@@ -804,31 +820,31 @@
         /* For very small screens */
         @media only screen and (max-width: 350px) {
             .circle {
-                width: 220px; /* MODIFIED (from 180px) */
-                height: 220px; /* MODIFIED (from 180px) */
+                width: 220px;
+                height: 220px;
             }
             
             .circle-right {
-                width: 200px; /* MODIFIED (from 160px) */
-                height: 200px; /* MODIFIED (from 160px) */
+                width: 200px;
+                height: 200px;
             }
             
             .circle-left {
-                width: 180px; /* MODIFIED (from 140px) */
-                height: 180px; /* MODIFIED (from 140px) */
+                width: 180px;
+                height: 180px;
             }
             
             .circle-left-3 {
-                width: 160px; /* MODIFIED (from 120px) */
-                height: 160px; /* MODIFIED (from 120px) */
+                width: 160px;
+                height: 160px;
             }
             
             .multiplier {
-                font-size: 2.2em; /* MODIFIED (from 1.8em) */
+                font-size: 2.2em;
             }
             
             .logo-small img {
-                width: 110px; /* MODIFIED (from 90px) */
+                width: 110px;
             }
             
             .logo img {
@@ -841,8 +857,8 @@
             }
             
             main {
-                margin-top: 80px; /* MODIFIED: Adjusted margin for very small screens (from 100px to 80px) */
-                height: calc(100% - 120px); /* MODIFIED: Adjusted height for very small screens (from 140px to 120px) */
+                margin-top: 80px;
+                height: calc(100% - 120px);
             }
             
             footer {
@@ -861,7 +877,7 @@
             }
             
             .login-container {
-                padding-top: 80px; /* Adjusting for very small screens */
+                padding-top: 80px;
             }
             
             .about-us-icon {
@@ -894,8 +910,8 @@
             }
             
             main {
-                height: calc(100% - 120px); /* MODIFIED: Adjusted height for small height screens (from 140px to 120px) */
-                margin-top: 80px; /* MODIFIED: Adjusted margin for small height screens (from 100px to 80px) */
+                height: calc(100% - 120px);
+                margin-top: 80px;
             }
             
             header {
@@ -903,27 +919,27 @@
             }
             
             .circle {
-                width: 210px; /* MODIFIED (from 170px) */
-                height: 210px; /* MODIFIED (from 170px) */
+                width: 210px;
+                height: 210px;
             }
             
             .circle-right {
-                width: 190px; /* MODIFIED (from 150px) */
-                height: 190px; /* MODIFIED (from 150px) */
+                width: 190px;
+                height: 190px;
             }
             
             .circle-left {
-                width: 170px; /* MODIFIED (from 130px) */
-                height: 170px; /* MODIFIED (from 130px) */
+                width: 170px;
+                height: 170px;
             }
             
             .circle-left-3 {
-                width: 150px; /* MODIFIED (from 110px) */
-                height: 150px; /* MODIFIED (from 110px) */
+                width: 150px;
+                height: 150px;
             }
             
             .multiplier {
-                font-size: 2.2em; /* MODIFIED (from 1.8em) */
+                font-size: 2.2em;
             }
         }
     </style>
@@ -1029,7 +1045,7 @@
 
             <footer>
                 <div class="nav-buttons">
-                    <a href="#" class="nav-home" onclick="logout()">
+                    <a href="#" class="nav-home"> 
                         <i class="fas fa-home"></i>
                     </a>
                     <div class="timer" id="timerDisplay">00:00:00</div>
@@ -1053,6 +1069,17 @@
                     <i class="fas fa-phone"></i> Call
                 </a>
                 <button class="helpline-close" id="helplineClose">Close</button>
+            </div>
+        </div>
+
+        <!-- New Ad Container -->
+        <div class="ad-container" id="adContainer">
+            <div class="ad-content">
+                <h3>Advertisement</h3>
+                <div id="adContent">
+                    <p>Loading advertisement...</p>
+                </div>
+                <button class="ad-close" id="adClose">Close Ad</button>
             </div>
         </div>
 
@@ -1086,6 +1113,11 @@
     let demoModeActive = false;
     let demoClicksRemaining = 0;
     const MAX_DEMO_CLICKS = 10;
+    
+    // Ad Control Variables - IMPROVED
+    let libtl_ad_loaded = false;
+    let libtl_ad_shown = false;
+    const AD_CLICK_DELAY = 2000; // Increased to 2 seconds for better ad display
 
     // Prediction settings from admin panel
     let predictionSettings = {
@@ -1140,8 +1172,9 @@
     
     const loginButton = document.getElementById('loginButton');
     const buttonLoading = document.getElementById('buttonLoading');
-    const loginLoading = document.getElementById('loginLoading'); // The full overlay element
-    const accessKeyInput = document.getElementById('accessKey'); // New reference for input
+    const loginLoading = document.getElementById('loginLoading');
+    const accessKeyInput = document.getElementById('accessKey');
+    const logoutButton = document.querySelector('.nav-home');
     
     const whatsappOption = document.getElementById('whatsappOption');
     const telegramOption = document.getElementById('telegramOption');
@@ -1150,6 +1183,95 @@
     const circleRight = document.querySelector('.circle-right');
     const circleLeft = document.querySelector('.circle-left');
     const circleLeft3 = document.querySelector('.circle-left-3');
+    
+    // New Ad Elements
+    const adContainer = document.getElementById('adContainer');
+    const adContent = document.getElementById('adContent');
+    const adClose = document.getElementById('adClose');
+
+    // Improved Ad Functions
+    function loadAndShowAd() {
+        if (!libtl_ad_loaded) {
+            // Load libtl ad script
+            const adScript = document.createElement('script');
+            adScript.src = '//libtl.com/sdk.js';
+            adScript.setAttribute('data-zone', '10001728');
+            adScript.setAttribute('data-sdk', 'show_10001728');
+            adScript.onload = function() {
+                libtl_ad_loaded = true;
+                showAd();
+            };
+            adScript.onerror = function() {
+                console.error('Failed to load ad script');
+                showFallbackAd();
+            };
+            document.body.appendChild(adScript);
+        } else {
+            showAd();
+        }
+    }
+
+    function showAd() {
+        adContainer.style.display = 'flex';
+        
+        if (typeof show_10001728 !== 'undefined') {
+            try {
+                show_10001728();
+                libtl_ad_shown = true;
+                trackAdImpression();
+            } catch (error) {
+                console.error('Error showing ad:', error);
+                showFallbackAd();
+            }
+        } else {
+            showFallbackAd();
+        }
+    }
+
+    function showFallbackAd() {
+        adContent.innerHTML = `
+            <div style="text-align: center; padding: 20px;">
+                <h4>Special Offer!</h4>
+                <p>Get premium predictions with higher accuracy</p>
+                <p style="font-size: 1.2em; color: #ff4500; font-weight: bold;">UP TO 95% WIN RATE</p>
+                <p>Contact admin for premium access</p>
+            </div>
+        `;
+        libtl_ad_shown = true;
+        trackAdImpression();
+    }
+
+    function trackAdImpression() {
+        console.log('Ad impression tracked at:', new Date().toLocaleTimeString());
+        // You can add Firebase tracking here
+    }
+
+    function closeAd() {
+        adContainer.style.display = 'none';
+    }
+
+    // Improved ad click handler
+    function handleAdClick(e, callback) {
+        e.preventDefault();
+        
+        const target = e.currentTarget;
+        const originalOpacity = target.style.opacity;
+        const originalPointerEvents = target.style.pointerEvents;
+        
+        // Visual feedback
+        target.style.opacity = '0.6';
+        target.style.pointerEvents = 'none';
+        
+        // Show ad
+        loadAndShowAd();
+        
+        // Execute callback after delay
+        setTimeout(() => {
+            target.style.opacity = originalOpacity || '1';
+            target.style.pointerEvents = originalPointerEvents || 'auto';
+            callback();
+        }, AD_CLICK_DELAY);
+    }
 
     // Helper function to apply/remove blur
     function toggleCircleBlur(isBlurred) {
@@ -1191,12 +1313,11 @@
         }
     }
 
-    // Show login loading - Only button loading is visible
+    // Show login loading
     function showLoginLoading() {
         loginButton.disabled = true;
         document.querySelector('.button-text').style.display = 'none';
         buttonLoading.style.display = 'flex';
-        // loginLoading.style.display = 'flex'; // Full overlay is now hidden as requested
     }
 
     // Hide login loading
@@ -1209,15 +1330,14 @@
 
     // New helper function to show login error
     function showLoginError(timing) {
-        accessKeyInput.style.borderColor = '#ff0000'; // Red border
+        accessKeyInput.style.borderColor = '#ff0000';
         errorMessage.style.display = 'block';
         
         setTimeout(() => {
             errorMessage.style.display = 'none';
-            accessKeyInput.style.borderColor = '#333'; // Reset border
-        }, timing === 'immediate' ? 1500 : 3000); // Shorter duration for immediate errors
+            accessKeyInput.style.borderColor = '#333';
+        }, timing === 'immediate' ? 1500 : 3000);
     }
-
 
     // Initialize the application
     document.addEventListener('DOMContentLoaded', function() {
@@ -1231,9 +1351,12 @@
         
         toggleCircleBlur(false);
         toggleCircleAnimation(false);
+        
+        // Setup ad close button
+        adClose.addEventListener('click', closeAd);
     });
 
-    // Set up event listeners
+    // Set up event listeners with improved ad logic
     function setupEventListeners() {
         loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -1241,18 +1364,22 @@
         });
 
         demoAccessLink.addEventListener('click', function(e) { 
-            e.preventDefault();
-            handleDemoAccess();
+            handleAdClick(e, handleDemoAccess);
+        });
+
+        helpLineLink.addEventListener('click', function(e) {
+            handleAdClick(e, () => showHelplineMenu('login'));
+        });
+        
+        aboutUsIcon.addEventListener('click', function(e) {
+            handleAdClick(e, showAboutUsPage);
         });
 
         nextButton.addEventListener('click', function() {
             if (!nextButton.disabled) {
+                nextButton.disabled = true;
                 generatePrediction();
             }
-        });
-
-        aboutUsIcon.addEventListener('click', function() {
-            showAboutUsPage();
         });
 
         backBtn.addEventListener('click', function() {
@@ -1260,14 +1387,12 @@
             loginPage.style.display = 'flex';
         });
 
-        helpLineLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            showHelplineMenu('login');
+        logoutButton.addEventListener('click', function(e) {
+            handleAdClick(e, logout);
         });
-
+        
         helpLineButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            showHelplineMenu('home');
+            handleAdClick(e, () => showHelplineMenu('home'));
         });
 
         helplineClose.addEventListener('click', function() {
@@ -1286,28 +1411,25 @@
         }
     }
 
-    // Handle user login with key - MODIFIED FOR ERROR/LOADING CONTROL
+    // Handle user login with key
     function handleLogin() {
         const accessKey = accessKeyInput.value.trim();
         const defaultErrorMessage = 'Invalid or expired access key!';
         errorMessage.textContent = defaultErrorMessage; 
-        accessKeyInput.style.borderColor = '#333'; // Reset border color
+        accessKeyInput.style.borderColor = '#333';
 
-        // Initial validation: Check if key is entered
         if (accessKey.length === 0) {
             errorMessage.textContent = 'Please enter your access key.';
             showLoginError('immediate');
             return;
         }
 
-        // Length validation
         if (accessKey.length > 8) {
             errorMessage.textContent = 'Access key must be 8 characters or less.'; 
             showLoginError('immediate');
             return;
         }
 
-        // Show loading only when starting Firebase check
         showLoginLoading(); 
 
         database.ref('keys').once('value').then(snapshot => {
@@ -1327,7 +1449,6 @@
                             keyFound = true;
                             demoModeActive = false;
                             
-                            // SUCCESS PATH: Keep loading visible for a small effect
                             setTimeout(() => {
                                 hideLoginLoading();
                                 loginPage.style.display = 'none';
@@ -1347,7 +1468,6 @@
             }
 
             if (!keyFound) {
-                // FAILURE PATH: Hide loading immediately and show error
                 hideLoginLoading(); 
                 if (expired) {
                     errorMessage.textContent = 'This key has expired. Please contact admin for a new key.';
@@ -1357,7 +1477,6 @@
                 showLoginError('delayed');
             }
         }).catch(error => {
-            // ERROR PATH: Hide loading immediately and show error
             hideLoginLoading(); 
             errorMessage.textContent = 'Connection error. Please try again.';
             showLoginError('delayed');
@@ -1365,12 +1484,12 @@
         });
     }
     
-    // Demo Access Function - MODIFIED: Reduced delay
+    // Demo Access Function
     function handleDemoAccess() {
         clearInterval(timerInterval);
         clearInterval(countdownInterval);
         
-        showLoginLoading(); // Only shows button loading
+        showLoginLoading();
         
         currentKey = { key: 'DEMO_KEY', expiry: 0 }; 
         demoModeActive = true;
@@ -1392,7 +1511,7 @@
             updateDemoState();
             toggleCircleBlur(false);
             toggleCircleAnimation(false);
-        }, 500); // Reduced delay for faster demo access
+        }, 500);
     }
 
     // Function to check and update demo state
@@ -1428,10 +1547,6 @@
                 predictionSettings.pattern = settings.pattern || 'sequential';
                 
                 console.log('✅ Prediction settings loaded:', predictionSettings);
-                console.log('✅ Current method:', predictionSettings.method);
-                console.log('✅ Pattern:', predictionSettings.pattern);
-                console.log('✅ Custom messages:', predictionSettings.customMessages);
-                console.log('✅ Custom results:', predictionSettings.customResults);
             }
         }, (error) => {
             console.error('❌ Error loading prediction settings:', error);
@@ -1478,13 +1593,15 @@
             if (demoClicksRemaining <= 0) {
                 updateDemoState();
                 showNotification('**Demo Limit Reached!** You cannot make any more predictions.');
+                if(nextButton.querySelector('.button-text').textContent !== 'Locked') {
+                    nextButton.disabled = false;
+                }
                 return;
             }
             demoClicksRemaining--;
             sessionStorage.setItem('demoClicksRemaining', demoClicksRemaining);
         }
 
-        nextButton.disabled = true;
         nextButton.querySelector('.button-text').style.display = 'none';
         nextButton.querySelector('.countdown-text').style.display = 'block';
 
@@ -1501,7 +1618,6 @@
                 clearInterval(countdownInterval);
 
                 getPrediction().then(result => {
-                    // Check if it's a message or a multiplier
                     const displayContent = result.includes('x') || result.includes('X') 
                         ? `<div class="multiplier">${result}</div>` 
                         : `<div class="message-text"><p>${result}</p></div>`;
@@ -1542,19 +1658,16 @@
         }, 1000);
     }
 
-    // Get prediction based on selected method - MODIFIED FOR DEMO RANDOM
+    // Get prediction based on selected method
     function getPrediction() {
         return new Promise((resolve, reject) => {
             
-            // --- NEW: Demo Mode Check for Random Results ---
             if (demoModeActive) {
-                // Generates a random multiplier between 1.01x and 9.99x
                 const randomMultiplier = (Math.random() * 8.99 + 1.01).toFixed(2) + 'x'; 
                 console.log('✅ Demo Mode: Generated random result:', randomMultiplier);
                 resolve(randomMultiplier);
                 return; 
             }
-            // --- END Demo Mode Check ---
             
             const method = predictionSettings.method || 'message';
             const pattern = predictionSettings.pattern || 'sequential';
@@ -1579,7 +1692,6 @@
                         if (predictionSettings.customResults && predictionSettings.customResults.length > 0) {
                             let result = getNextItemSequential(predictionSettings.customResults, 'custom');
                             
-                            // Clean and format the result
                             result = result.trim();
                             if (!result.includes('x') && !result.includes('X')) {
                                 result = result + 'x';
@@ -1631,14 +1743,12 @@
         
         console.log(`📊 ${type} - Current index:`, currentIndex, 'Total items:', items.length);
         
-        // Ensure index is within bounds
         if (currentIndex >= items.length) {
             currentIndex = 0;
         }
         
         const selectedItem = items[currentIndex];
         
-        // Move to next index (circular)
         currentIndex = (currentIndex + 1) % items.length;
         sessionStorage.setItem(storageKey, currentIndex);
         
@@ -1730,7 +1840,7 @@
         loginPage.style.display = 'flex';
         
         document.getElementById('accessKey').value = '';
-        accessKeyInput.style.borderColor = '#333'; // Reset input border on logout
+        accessKeyInput.style.borderColor = '#333';
         currentKey = null;
         keyExpiry = null;
         
